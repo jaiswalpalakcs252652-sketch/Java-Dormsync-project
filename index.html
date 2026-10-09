@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormSync - Digital Shared Accommodation Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #ECF0F1;
+            color: #2C3E50;
+            line-height: 1.6;
+        }
+        header {
+            background: #2C3E50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 3em; margin-bottom: 10px; }
+        header p { font-size: 1.2em; opacity: 0.9; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .section { margin-bottom: 60px; }
+        .section h2 {
+            font-size: 2em;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            border-left: 6px solid #2980B9;
+            padding-left: 15px;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .tech {
+            background: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid #BDC3C7;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 6px solid #27AE60;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .feature h3 { color: #27AE60; margin-bottom: 10px; }
+        footer {
+            background: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+        ul { padding-left: 25px; }
+        ul li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DormSync</h1>
+    <p>Digital Shared Accommodation Management System</p>
+    <p style="margin-top: 15px; font-size: 1em;">Java Swing • MySQL • JDBC</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>About the Project</h2>
+        <p>
+            DormSync is a desktop-based management system for hostels and shared accommodation facilities.
+            It provides a complete solution for managing rooms, tenants, payments, chores, and visitors —
+            with separate experiences for <strong>Admins</strong> (who manage everything) and
+            <strong>Users</strong> (who view their own data and update their profile).
+        </p>
+        <p style="margin-top: 15px;">
+            Built using <strong>Core Java</strong> with a clean <strong>MVC + DAO architecture</strong>,
+            the application connects to a <strong>MySQL</strong> database and offers a modern, custom-styled GUI.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Technology Stack</h2>
+        <div class="tech-stack">
+            <span class="tech">Java (Core)</span>
+            <span class="tech">Java Swing</span>
+            <span class="tech">JDBC</span>
+            <span class="tech">MySQL 8.0</span>
+            <span class="tech">Apache NetBeans</span>
+            <span class="tech">OpenPDF</span>
+            <span class="tech">Apache POI</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🛡️ Role-Based Access</h3>
+                <p>Admin and User roles with distinct dashboards and permissions.</p>
+            </div>
+            <div class="feature">
+                <h3>🏠 Room Management</h3>
+                <p>Airbnb-style card grid showing all rooms with type, capacity, and availability.</p>
+            </div>
+            <div class="feature">
+                <h3>👥 User Management</h3>
+                <p>Admins can promote, demote, delete, or reset passwords for any user.</p>
+            </div>
+            <div class="feature">
+                <h3>💰 Payment Tracking</h3>
+                <p>Record payments with method, date, and status. Auto-generate monthly rent.</p>
+            </div>
+            <div class="feature">
+                <h3>🧹 Kanban Chore Board</h3>
+                <p>Visual 3-column board (Pending / In Progress / Completed).</p>
+            </div>
+            <div class="feature">
+                <h3>🔍 Search & Sort</h3>
+                <p>Live search on every table, plus column sorting.</p>
+            </div>
+            <div class="feature">
+                <h3>📄 PDF Export</h3>
+                <p>Export payment reports to professional PDF files.</p>
+            </div>
+            <div class="feature">
+                <h3>👤 Profile Management</h3>
+                <p>Users edit their own name, phone, and password.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Architecture</h2>
+        <p>DormSync follows the <strong>MVC-inspired DAO pattern</strong>:</p>
+        <ul style="margin-top: 15px;">
+            <li><strong>gui</strong> — All Swing frames and UI components</li>
+            <li><strong>dao</strong> — Database operations (SQL queries)</li>
+            <li><strong>model</strong> — Plain Java classes (User, Room, Payment, etc.)</li>
+            <li><strong>util</strong> — Shared helpers (DBConnection)</li>
+        </ul>
+        <p style="margin-top: 15px;">This clean separation makes the code maintainable, testable, and scalable.</p>
+    </div>
+
+    <div class="section">
+        <h2>Roles</h2>
+        <p><strong>Admin can:</strong> Manage rooms, allocations, payments, chores, visitors, users, and generate PDF reports.</p>
+        <p style="margin-top: 10px;"><strong>User can:</strong> View own payments, visitors, chores, and edit their own profile.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p><strong>DormSync</strong> — Digital Shared Accommodation Management System</p>
+    <p style="margin-top: 8px; opacity: 0.8; font-size: 0.9em;">© 2026 — Java Swing + MySQL Project</p>
+</footer>
+
+</body>
+</html>

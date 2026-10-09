@@ -1,0 +1,63 @@
+
+# ═══════════════════════════════════════════
+# DormSync — Git Ignore Configuration
+# ═══════════════════════════════════════════
+
+# ---- Build Output ----
+build/
+dist/
+target/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# ---- NetBeans ----
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+build.xml.user
+
+# ---- IDE ----
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# ---- OS Generated ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs & Temp ----
+*.log
+*.tmp
+*.bak
+*.old
+
+# ---- Database Dumps (keep local, not in repo) ----
+*.sql
+*.sql.gz
+
+# ---- Secrets ----
+.env
+*.properties.local
+config.properties
+
+# ---- Generated Reports ----
+*.pdf
+receipts/
+Payments_Report.pdf
+Admin_Payments_Report.pdf
+
+# ---- Screenshots (optional — uncomment if you don't want to upload) ----
+# screenshots/
+# *.png
+# *.jpg
+
+# ---- Netlify (only if you deploy from this repo) ----
+.netlify/
+.cache/
